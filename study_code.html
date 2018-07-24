@@ -25,12 +25,74 @@
     document.querySelector('body').style.backgroundColor='white';
     document.querySelector('body').style.color='pink';
   ">
+  <input id="night_day" type="button" value="밤버전" onclick="
+  if(document.querySelector('body').style.backgroundColor === 'white'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('#night_day').value = '낮버전';
+    } else {
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('#night_day').value = '밤버전';
+    }
+    "/>
+    <input type="button" value="밤버전" onclick="
+    var target = document.querySelector('body');
+    if(target.style.backgroundColor === 'white'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = '낮버전';
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = '밤버전';
+      }
+      "/>
+    <input id="night_day" type="button" value="night" onclick="
+  var target = document.querySelector('body');
+  if(this.value === 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+  }
+">
   <h1><a href="index.html">HTML을 공부하며 만드는 홈페이지</a></h1>
   <ol>
     <li><a href="study_code.html">코딩공부</a></li>
     <li><a href="blog.html">블로그 놀이</a></li>
     <li><a href="morgue.html">그녀의 은밀한 자료</a></li>
   </ol>
+  <h1>Loop & Array 배열과 반복문 </h1>
+      <script>
+        var coworkers = ['egoing','leezche','duru','taeho'];
+      </script>
+      <h2>Co workers</h2>
+      <ul>
+        <script>
+          var i = 0;
+          while(i < coworkers.length){
+            document.write('<li><a href="http://a.com/'+coworkers[i]+'">'+coworkers[i]+'</a></li>');
+            i = i + 1;
+          }
+        </script>
+  </ul>
+
+  <h3>배열</h3>
+    <P>
+      사람이 감당할 수 없이 복잡해져서... 배열이 필요해짐
+    </P>
+
+<h3>조건문 예고</h3>
+
+<h3>리팩토리 </h3>
+<p>
+   코드를 효율적으로 만들면서 중복안되게 기능적으2
+</p>
+
 
 <h3>조건문 예고</h3>
 <p>조건에 따라 단순한 반복, 시간에 따른게 아닌 복잡한 논리에 따라서 움직이는 냐옹 <br><u>if</u>비교연산자<br> </p>
@@ -110,6 +172,45 @@
     </p>
   </p><p style="margin-top:45px;">HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
   </p>
+
+  <input  type="button" value="밤버전" onclick="
+  var target = document.querySelector('body');
+  if(this.value === '밤버전'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+    (this.value = '낮버전';
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+    (this.value = '밤버전';
+    }
+    "/>
+    <input  type="button" value="밤버전" onclick="
+    var target = document.querySelector('body');
+    if(this.style.backgroundColor === 'white'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+      (this.value = '낮버전';
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+      (this.value = '밤버전';
+      }
+      "/>
+
+      이버튼이 생코꺼
+      <input id="night_day" type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+    }
+  ">
 </body>
 
 </head> </html>
