@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HW page</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <h1>Object객체</h1>
+
+  <p>
+    <br>함수랑 객체랑 같이감
+    <br>객체란 무엇? - 객체가 가지고 있는 다면적인 얼굴들이 있는데 그 중 하나는?
+    <br>->> 하나의 특성? 존재이유? 기능? = 역시 정리정돈?
+    <br>배열은 정보를 담는 그릇과 순서가 있음
+    <br>체계가 없고 수납 할 수 있으려면? - 객체 체계가 걍 없으면 쓰레기통임 꺼내는 목표가 아님
+  </p>
+  <h2>Create</h2>
+  <script>
+    var coworkers = {
+      "programmer":"룰루",
+      "designer":"우히히"
+    };
+    document.write("programmer: "+coworkers.programmer+"<br>");
+    coworkers.bookeeper = "cur";
+  </script>
+
+  <script>
+      var coworkers = {
+        "programmer":"egoing",
+        "designer":"leezche"
+      };
+      document.write("programmer : "+coworkers.programmer+"<br>");
+      document.write("designer : "+coworkers.designer+"<br>");
+      coworkers.bookkeeper = "duru";
+      document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+      coworkers["data scientist"] = "taeho";
+      document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+    띠어쓰기 있는건 대괄호로  <span style="color:pink">coworkers["data scientist"] = "taeho"</span> 이렇게
+    <span style="color:red"> [,]</span> 빼먹어서 코딩 안되기도
+
+    <h2>객체와 반복문 Iterate</h2>
+    <script>
+      for(var key in coworkers) {
+
+
+      }
+    </script>
+
+
+</body>
+</html>

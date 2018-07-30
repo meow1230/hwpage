@@ -14,9 +14,39 @@
     span{color:blue}
     h3{color:coral}
   </style>
+  <script>
+  function nightDayHandler(self){
+  var target = document.querySelector('body');
+  if(self.value === '밤버전'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    self.value = '낮버전ㅋ';
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+      alist[i].style.color = 'powderblue';
+      i = i + 1;
+    }
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    self.value = '밤버전';
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+      alist[i].style.color = 'pink';
+      i = i + 1;
+    }
+  }
+}
+  </script>
 </head>
 
 <body>
+ <input id="night_day" type="button" value="밤버전" onclick="
+   nightDayHandler(this);
+ ">
+
   <input type="button" value="밤버전" onclick="
     document.querySelector('body').style.backgroundColor='black';
     document.querySelector('body').style.color='white';
@@ -66,6 +96,8 @@
     <li><a href="blog.html">블로그 놀이</a></li>
     <li><a href="morgue.html">그녀의 은밀한 자료</a></li>
   </ol>
+  <h1>Loop & Array 배열과 반복문 </h1>
+  <p>리펙토링의 중요한 것들 중하나가 함수 </p>
   <h1>Loop & Array 배열과 반복문 </h1>
       <script>
         var coworkers = ['egoing','leezche','duru','taeho'];
