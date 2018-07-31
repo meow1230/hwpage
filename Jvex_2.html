@@ -3,9 +3,49 @@
 <head>
   <title>HW page</title>
   <meta charset="utf-8">
+  <script>
+  var Links = {
+   setColor:function(color){
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       alist[i].style.color = color;
+       i = i + 1;
+     }
+   }
+ }
+  var Body = {
+    setColor:function (color){
+      document.querySelector('body').style.color = color;
+    },
+    setBackgroundColor:function (color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
+  }
+  function nightDayHandler(self){
+   var target = document.querySelector('body');
+    if(self.value === '밤버전'){
+      Body.setBackgroundColor('black');
+      Body.setColor('white');
+      self.value = '낮버전';
+
+      Links.setColor('powderblue');
+    } else {
+      Body.setBackgroundColor('white');
+      Body.setColor('black');
+      self.value = '밤버전';
+
+      Links.setColor('blue');
+    }
+  }
+</script>
+
 </head>
 
 <body>
+  <input id="night_day" type="button" value="밤버전" onclick="
+  nightDayHandler(this);
+  ">
   <h1><a href="index.html">HTML을 공부하며 만드는 홈페이지</a></h1>
   <ol>
     <li><a href="study_code.html">코딩공부</a></li>
