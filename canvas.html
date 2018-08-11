@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>희오니의! Canvas Workshop - lesson 1: create the Canvas and draw on it</title>
+    <style>* { padding: 0; margin: 0; } canvas { background: #eee; display: block; margin: 0 auto; }</style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<!=== 이게 선언 같은거 난 캔버스를 그리겠다. 다 마이켄버스라고 하는 건가?  ==>
+
+<script>
+  //자바스크립트 코드가 여기 들어
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    //위 두개의 var 태그는 캔버스 변수? 뭔소리야 2D Rendering context는 ctx변수에 저장함
+    ctx.beginPath();
+    ctx.rect(0, 100, 50, 50);
+    //rect(x좌표,-y좌표(왜아래로 움직이는지 이해불가),길이,높이)
+    ctx.fillStyle = "#FF0000";
+    ctx.fill();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+    //arc가 원그리나봄; 모야 네번째칸 수치 바꾸니 원이아닌 반원같은걸로 변함
+    ctx.fillStyle = "green";
+    ctx.fill();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.rect(160, 10, 100, 40);
+    ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+    ctx.stroke();
+    ctx.closePath();
+</script>
+
+</body>
+</html>
