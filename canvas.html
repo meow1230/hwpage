@@ -21,9 +21,12 @@
     ctx.fillStyle = "#FF0000";
     ctx.fill();
     ctx.closePath();
+    //beginPath와 closePath메소드 사이에 모든 명령어가 들어감.
+    //직사각형을 정의해주고 처음 두값은 캔버스의 좌상단 모서리로부터 좌표
+
     ctx.beginPath();
     ctx.arc(240, 160, 20, 0, Math.PI*2, false);
-    //arc가 원그리나봄; 모야 네번째칸 수치 바꾸니 원이아닌 반원같은걸로 변함
+    //arc가 원그리나봄; 모야 네번째칸 수치 바꾸니 원이아닌 반원같은걸로 변
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
